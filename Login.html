@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RIT</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+
+  <body>
+    <section class="Login__head-sec bg-orange">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center text-light my-2">
+              RIT | Rochester Institute of Technology
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Login__Sec" class="my-5 py-5">
+      <div class="container login__bottom">
+        <div class="row Login__Sec-outer-contaner mx-auto">
+          <div class="col-md-6 col-sm-12">
+            <div class="Login__sec-form-container p-5 text-capitalize">
+              <h2 class="login__sec-heading text-center">Login</h2>
+              <form class="Login__sec-form d-flex flex-column align-items-center" action="./home.html" method="GET">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" placeholder="RIT Username" class="form-control input-style border-0" id="username" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="input-group mb-3 input-style">
+                    <input name="password" type="password" value="" class="form-control password-input bg-transparent border-0" id="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="input-group-append bg-transparent eye-container">
+                      <span class="input-group-text eye none bg-transparent h-100 border-0 none" id="basic-addon1"><i class="fa fa-eye"></i></span>
+                      <span class="input-group-text eye-slash bg-transparent h-100 border-0" id="basic-addon1"><i class="fa fa-eye-slash"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                  <div class="form-check mx-4">
+                    <input type="checkbox" class="form-check-input checkBox" id="rememberMe">
+                    <label class="form-check-labelfw-light" for="rememberMe">Remember me</label>
+                  </div>
+                  <button type="submit" class="btn bg-orange submit-btn text-light px-3 py-0 mx-4">Login</button>
+                </div>
+                <div class="mb-3 Login__sec-form">
+                  <a href="#">Forgot&nbsp;Username</a>
+                  <a href="#" class="border-start border-end px-2">Forgot&nbsp;Password</a>
+                  <a href="#">Change&nbsp;Password</a>
+                </div>
+                <div class="invalid-text" style="display: none">Invalid username or password</div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 px-0">
+            <div
+              class="student-info-system h-100 d-flex justify-content-center text-center align-items-center"
+            >
+              <h2 class="mx-5 py-5 my-5">Student Informatiom System</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    let btn = document.querySelector(".eye-container");
+    let eye = document.querySelector(".eye");
+    let eyeSlash = document.querySelector(".eye-slash");
+    let password = document.querySelector(".password-input");
+
+    btn.addEventListener("click", () => {
+      eyeSlash.classList.toggle("none");
+      eye.classList.toggle("none");
+      if (eyeSlash.classList.contains("none")) {
+        password.setAttribute("type", "text");
+      } else {
+        password.setAttribute("type", "password");
+      }
+    });
+
+
+
+    function validateForm() {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  if (username === 'valid_username' && password === 'valid_password') {
+    return true; // allow form to be submitted
+  } else {
+    const invalidText = document.querySelector('.invalid-text');
+    invalidText.style.display = 'block'; // show the "invalid username or password" message
+    return false; // prevent form from being submitted
+  }
+}
+
+document.querySelector('.Login__sec-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var validUsernames = ['user1', 'user2', 'user3', 'user4', 'user5'];
+  var validPasswords = ['pass5', 'pass2', 'pass3', 'pass4', 'pass5'];
+
+  var isValid = false;
+  for (var i = 0; i < validUsernames.length; i++) {
+    if (username === validUsernames[i] && password === validPasswords[i]) {
+      isValid = true;
+      break;
+    }
+  }
+
+  if (isValid) {
+    window.location.href = './home.html';
+  } else {
+    document.querySelector('.invalid-text').style.display = 'block';
+  }
+});
+  </script>
+</html>
