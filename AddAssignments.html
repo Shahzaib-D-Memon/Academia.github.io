@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RIT</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+
+  <body>
+    <section class="Planner_Academic__head-sec bg-orange">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="Home__head col-md-4 py-1">
+            <a href="academicRecords.html" style="text-decoration: none">
+              <h4 class="text-light text-lg-start text-center">
+                Academic Records
+              </h4>
+            </a>
+          </div>
+          <div class="Home__head col-md-4 py-1">
+            <a href="#" style="text-decoration: none">
+              <h4 class="text-center text-light">Grades Prediction</h4>
+            </a>
+          </div>
+          <div class="Home__head col-md-4 text-lg-end text-center py-1">
+            <a href="home.html" style="text-decoration: none">
+              <h4 class="text-light">Home</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="add_assignments_sec">
+      <form id="myForm">
+        <div class="assignment_table_sec">
+          <table style="width: 100%" class="_table" id="myTable">
+            <tr>
+              <th>Assignment</th>
+              <th>Points</th>
+              <th>Grade achieved</th>
+            </tr>
+            <tr id="placeholder-row">
+              <td>
+                <input
+                  type="text"
+                  data-id="1"
+                  data-name="first_name"
+                  name="assignment"
+                  id="first"
+                  placeholder="Assignment #1"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  data-id="1"
+                  data-name="points"
+                  name="points"
+                  id="second"
+                  placeholder="10"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  data-id="1"
+                  data-name="grades"
+                  name="grades"
+                  id="third"
+                  placeholder="0.5"
+                />
+              </td>
+            </tr>
+          </table>
+
+          <div class="button_div">
+            <a class="add_more_assign_button" onclick="addRow()"
+              >+ Add more assignments</a
+            >
+          </div>
+        </div>
+
+        <div class="assignment_table_sec">
+          <table style="width: 100%" class="_table" id="myTable2">
+            <tr>
+              <th>Assessments</th>
+              <th>Points</th>
+              <th>Grade achieved</th>
+            </tr>
+            <tr id="placeholder-row2">
+              <td>
+                <input
+                  type="text"
+                  data-id="1"
+                  data-name="first_name"
+                  name="assignment"
+                  id="first"
+                  placeholder="Quiz #1"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  data-id="1"
+                  data-name="points"
+                  name="points"
+                  id="second"
+                  placeholder="10"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  data-id="1"
+                  data-name="grades"
+                  name="grades"
+                  id="third"
+                  placeholder="0.5"
+                />
+              </td>
+            </tr>
+          </table>
+          <div class="button_div">
+            <a class="add_more_assign_button" onclick="addRow2()"
+              >+ Add more assessments</a
+            >
+          </div>
+        </div>
+
+        <div class="assignment_table_sec">
+          <table style="width: 100%" class="_table" id="myTable3">
+            <tr>
+              <th>Others</th>
+              <th>Points</th>
+              <th>Grade achieved</th>
+            </tr>
+            <tr id="placeholder-row3">
+              <td>
+                <input
+                  type="text"
+                  name="assignment"
+                  data-id="1"
+                  data-name="first_name"
+                  placeholder="Class Participation"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  data-id="1"
+                  data-name="points"
+                  name="points"
+                  placeholder="10"
+                />
+              </td>
+              <td>
+                <input type="text" data-id="1" data-name="grades" name="grades
+                placeholder="0.5">
+              </td>
+            </tr>
+          </table>
+          <div class="button_div">
+            <a class="add_more_assign_button" onclick="addRow3()"
+              >+ Add other grading items</a
+            >
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <div class="submit_button">
+      <a href="./Predict.html" onclick="return validateForm()">Submit</a>
+    </div>
+
+    <script>
+      function addRow() {
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        cell1.innerHTML =
+          '<input type="text" data-id="' +
+          (table.rows.length - 1) +
+          '" data-name="first_name" id="first" name="assignment' +
+          (table.rows.length - 1) +
+          '"  placeholder="Assignment #1"> ';
+        cell2.innerHTML =
+          '<input type="number" data-id="' +
+          (table.rows.length - 1) +
+          '" data-name="points" id="second" name="points' +
+          (table.rows.length - 1) +
+          '" placeholder="10"> ';
+        cell3.innerHTML =
+          '<input type="number" data-id="' +
+          (table.rows.length - 1) +
+          '" data-name="grades" id="third" name="grades' +
+          (table.rows.length - 1) +
+          '" placeholder="0.5"> ';
+
+        addEv();
+      }
+
+      function addRow2() {
+        var table = document.getElementById("myTable2");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        cell1.innerHTML =
+          '<input type="text" data-id="' +
+          (table.rows.length - 1) +
+          '" data-name="first_name" id="first" name="assignment' +
+          (table.rows.length - 1) +
+          '"  placeholder="Quiz #1"> ';
+        cell2.innerHTML =
+          '<input type="number" data-id="' +
+          (table.rows.length - 1) +
+          '" data-name="points" id="second" name="points' +
+          (table.rows.length - 1) +
+          '" placeholder="10"> ';
+        cell3.innerHTML =
+          '<input type="number" data-id="' +
+          (table.rows.length - 1) +
+          '" data-name="grades" id="third" name="grades' +
+          (table.rows.length - 1) +
+          '" placeholder="0.5"> ';
+        addEv();
+      }
+
+      function addRow3() {
+        var table = document.getElementById("myTable3");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        cell1.innerHTML =
+          '<input type="text" data-id="' +
+          (table.rows.length - 1) +
+          '" data-name="first_name" id="first" name="assignment' +
+          (table.rows.length - 1) +
+          '"  placeholder="Class Participation"> ';
+        cell2.innerHTML =
+          '<input type="number" data-id="' +
+          (table.rows.length - 1) +
+          '" data-name="points" id="second" name="points' +
+          (table.rows.length - 1) +
+          '" placeholder="10"> ';
+        cell3.innerHTML =
+          '<input type="number" data-id="' +
+          (table.rows.length - 1) +
+          '" data-name="grades" id="third" name="grades' +
+          (table.rows.length - 1) +
+          '" placeholder="0.5"> ';
+
+        addEv();
+      }
+
+      var _formData = {};
+      function validateForm() {
+        // Get all the input elements in the form
+        var inputs = document.querySelectorAll("#myForm input");
+
+        // Check if any input field is empty
+        for (var i = 0; i < inputs.length; i++) {
+          if (inputs[i].value === "") {
+            // Show confirmation message and return false to prevent form submission
+            if (
+              !confirm(
+                "Are you sure you want to submit without filling the fields?"
+              )
+            ) {
+              return false;
+            }
+            break;
+          }
+        }
+
+        const sendArray = JSON.stringify(_formData);
+        console.log("data while saving", sendArray);
+
+        var lastData = localStorage.setItem("_formData", sendArray);
+
+        // All fields are filled, allow form submission
+        return true;
+      }
+
+      var lastData = localStorage.getItem("_formData");
+      console.log("last data", localStorage);
+
+      function addEv() {
+        var inputs = document.querySelectorAll("input");
+        inputs.forEach(function (ele) {
+          ele.addEventListener("keyup", function (e) {
+            var dataID = parseInt(e.target.getAttribute("data-id"));
+            const dataName = e.target.getAttribute("data-name");
+
+            var parentEl = e.target.closest("._table").getAttribute("id");
+            dataID = dataID + parentEl;
+
+            _formData[dataID] =
+              _formData[dataID] == undefined ? {} : _formData[dataID];
+            _formData[dataID][dataName] = e.target.value;
+            console.log("data array", _formData);
+          });
+        });
+      }
+
+      localStorage.setItem("_formData", []);
+      addEv();
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
