@@ -1,0 +1,565 @@
+/* Login page styling start*/
+* {
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 600;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:wght@300;600&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&family=Unbounded:wght@200;300;400&display=swap');
+.Login__head-sec h1 {
+  font-family: Epilogue;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.bg-orange {
+  background-color: #f76907ff;
+}
+.Login__Sec-outer-contaner {
+  box-shadow: 0px 0px 5px 1px #bfbfbf;
+  border-radius: 8px;
+  max-width: 980px;
+}
+.login__sec-heading {
+  font-family: Epilogue;
+  font-size: 32px;
+  line-height: 48px;
+  color: #171a1fff;
+  font-weight: 700;
+}
+.Login__sec-form label {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #171a1fff;
+}
+.none {
+  display: none !important;
+}
+.Login__sec-form input:focus {
+  box-shadow: none !important;
+  border: none;
+}
+.Login__sec-form input::placeholder {
+  color: grey;
+  font-weight: 500;
+}
+.Login__sec-form .input-style {
+  width: 256px;
+  height: 44px;
+  font-family: Inter;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #f3f4f6ff;
+}
+
+.Login__sec-form .submit-btn {
+  border-radius: 8px;
+}
+.Login__sec-form .submit-btn:active {
+  box-shadow: 0px 0px 4px 2px #f76907ff !important;
+}
+.Login__sec-form .checkBox {
+  border: 2px solid #f76907ff;
+}
+.Login__sec-form .checkBox:focus {
+  border: 2px solid #f76907ff;
+}
+.Login__sec-form .checkBox:checked {
+  background-color: #f76907ff;
+}
+.Login__sec-form a {
+  font-family: Epilogue;
+  font-size: 14px;
+  line-height: 22px;
+  color: #f76907ff;
+  text-decoration: none;
+  border-color: #f76907ff !important;
+  font-weight: 600;
+}
+
+.student-info-system {
+  background-color: #f76907ff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.student-info-system h2 {
+  font-family: Inter;
+  font-size: 48px;
+  line-height: 68px;
+  color: #ffffffff;
+  font-weight: 700;
+}
+.invalid-text {
+  color: red;
+}
+
+/* Login page styling end*/
+
+/* Home page styling start */
+
+.home__head-search {
+  width: 23rem;
+
+  border-radius: 50px;
+  height: 40px !important;
+  padding: 0 30px;
+}
+.home__head-search input {
+  width: 90%;
+}
+.home__head-search input:focus {
+  outline: none;
+  border: none;
+}
+.Home-body .home-link {
+  border: 5px solid #f76907ff;
+  border-radius: 50%;
+  width: 11rem;
+  height: 11rem;
+  box-shadow: 0px 0px 20px 4px #e4e4e4;
+}
+.home-link h5 {
+  line-height: 2rem;
+}
+
+/* home Styling end */
+
+/* Planner Styling start */
+.planner_Head {
+  background-color: #f76907ff;
+}
+.planner_header a {
+  margin: 0;
+  text-decoration: none;
+  font-size: 24px;
+}
+.plannerOne h2 {
+  font-size: 40px;
+}
+.plannerOneBtns {
+  border: 3px solid #f76907ff;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 15px;
+  width: 20rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.plannerOneBtns:focus {
+  box-shadow: none !important;
+}
+.plannerOneBtns:hover {
+  background-color: #f76907ff;
+  color: white;
+}
+
+/* Planner Styling end */
+
+/*  academic Records page styling start */
+
+.academicRecords__head-search {
+  width: 17rem;
+  border-radius: 50px;
+  height: 2.3rem;
+}
+.academicRecords__head-search input {
+  width: 85%;
+}
+.academicRecords__head-search input:focus {
+  outline: none;
+  border: none;
+}
+.academic_head-container {
+  width: 55rem;
+}
+.academic-card {
+  border: 5px solid #f76907ff;
+  box-shadow: 0px 0px 10px 5px rgb(184, 184, 184);
+}
+
+/* academic Records page styling end */
+
+/* enrollment & Search pages styling start */
+
+.enrollmentSearch__head-search {
+  width: 16rem;
+  border-radius: 50px;
+  height: 2.3rem;
+}
+.enrollmentSearch__head-search input {
+  width: 85%;
+}
+.enrollmentSearch__head-search input:focus {
+  outline: none;
+  border: none;
+}
+.enrollmentSearch_head-container {
+  width: 55rem;
+}
+.enrollmentSearch-card {
+  border: 5px solid #f76907ff;
+  box-shadow: 0px 0px 10px 5px rgb(184, 184, 184);
+}
+
+/* enrollment & Search pages styling end */
+
+/* Planner_Academic Styling start */
+
+.planner_Head {
+  background-color: #f76907ff;
+}
+
+.plannerTwo_header a {
+  margin: 0;
+  text-decoration: none;
+  font-size: 24px;
+}
+.PlannnerTwoHeadText {
+  font-size: 30px !important;
+}
+.years-container p {
+  font-size: 15px;
+  font-weight: bold;
+}
+.courseOrangeBox {
+  background-color: #f76907ff;
+  box-shadow: 0px 17px 35px #a1a1a1, 0px 0px 2px #a1a1a1;
+  width: 6rem;
+  height: 6rem;
+}
+.orangeBoxtext {
+  color: #fff;
+  font-size: 1.1rem !important;
+  font-weight: 900;
+}
+.whiteBoxtext {
+  color: #f76907ff;
+  font-size: 1.1rem !important;
+  font-weight: 900;
+}
+.courseWhiteBox {
+  background-color: #fff;
+  box-shadow: 0px 17px 35px #a1a1a1, 0px 0px 2px #a1a1a1;
+  border: 3px solid black;
+  color: #f76907ff;
+  width: 6rem;
+  height: 6rem;
+}
+.year-box {
+  border: 4px solid #f76907ff;
+  border-radius: 45px;
+  box-shadow: 0px 17px 35px #a1a1a1, 0px 0px 2px #a1a1a1; /* shadow-xl */
+}
+.year-box2 {
+  border: 2px solid black;
+  border-radius: 45px;
+  box-shadow: 0px 17px 35px #a1a1a1, 0px 0px 2px #a1a1a1; /* shadow-xl */
+}
+
+.fixed-btn {
+  position: fixed;
+  width: 4.5rem;
+  right: 3rem;
+  bottom: 3rem;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 1px rgb(191, 191, 191);
+}
+.fixed-btn:focus {
+  box-shadow: 0px 5px 10px 1px rgb(191, 191, 191);
+}
+@media screen and (max-width: 767px) {
+  .PlannnerTwoHeadText {
+    font-size: 24px !important;
+  }
+  /*.plannerTwo_header{
+
+    }*/
+}
+@media screen and (max-width: 576px) {
+  .plannerTwo_header {
+    display: block !important;
+  }
+  .plannerTwo_header div a {
+    font-size: 20px !important;
+  }
+  .plannerOneBtns {
+    font-size: 1rem;
+    font-weight: bold;
+    width: 15rem;
+  }
+  .planner_header {
+    display: block !important;
+  }
+  .headerTextTwo {
+    margin-right: 0 !important;
+  }
+  .text-light {
+    font-size: 20px !important;
+  }
+  .Home__head a h4 {
+    line-height: 20px !important;
+  }
+  .home__head-search {
+    width: 15rem !important;
+  }
+  .enrollmentSearch__head {
+    flex-direction: column !important;
+  }
+  .academicRecords__head {
+    flex-direction: column !important;
+  }
+}
+
+.Grads_Heading {
+  font-size: 28px;
+  margin-top: 50px;
+  line-height: 56px;
+  color: #171a1fff;
+  font-weight: 650;
+}
+.grads-text {
+  width: 100%;
+  max-width: 30rem;
+}
+.Grads__Triangle img {
+  height: 230px;
+}
+.Home__head a h4 {
+  font-size: 21px;
+  line-height: 48px;
+  font-weight: 9800;
+  color: #ffffffff;
+}
+.Grads__btn button {
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffffff;
+  background: #f76907ff;
+  opacity: 1;
+  border: none;
+  border-radius: 26px;
+  box-shadow: 0px 17px 35px #999999, 0px 0px 2px #8d8e91;
+  padding: 5px 80px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.Grads__btn button:hover {
+  color: #ffffffff;
+  background: #de5d07ff;
+}
+.Grads__btn button:hover:active {
+  color: #ffffffff;
+  background: #c55206ff;
+}
+
+/* Course section */
+
+.course__title {
+  font-size: 24px;
+  /* line-height: 32px;  */
+  color: #171a1fff;
+}
+.course__subject {
+  border: 4px solid #f76907ff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.course__subject p {
+  padding: 5px 20px;
+  font-size: 24px;
+  /* line-height: 22px;  */
+  color: #171a1fff;
+}
+
+/* Predict section  */
+.table {
+  /* width: 85%; */
+  border: 4px solid #f76907ff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.table__grade {
+  border: 4px solid #f76907ff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0 !important;
+  width: 100%;
+  max-width: 30rem;
+}
+.text-center {
+  text-align: center;
+}
+.course-text {
+  font-family: Inter;
+  font-size: 18px;
+  color: #171a1fff;
+  margin-top: 4rem;
+}
+.course-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course-btn {
+  border-radius: 30px;
+  background-color: #f76907ff;
+  border: none;
+  color: white;
+  padding: 5px 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.first {
+  display: flex;
+  flex-wrap: wrap;
+}
+.first label {
+  padding-left: 10px;
+  font-weight: 500 !important;
+}
+.check-box {
+  color: #f76907ff;
+}
+
+.check-box:checked {
+  background-color: #f76907ff !important;
+  color: #f76907ff;
+}
+
+/* Grades Pridict page styling start */
+.Gradespridict-head-cover {
+  width: 100%;
+  max-width: 43rem;
+}
+
+.Gradespridict-card-cover {
+  border: 5px solid #f76907ff;
+  box-shadow: 0px 0px 10px 5px rgb(184, 184, 184);
+  width: 100%;
+  max-width: 40rem;
+}
+.gradesPridict-Radio {
+  height: 25px;
+  width: 25px;
+  accent-color: #f76907ff;
+}
+/* Grades Pridict page styling end */
+
+
+/* add assignments page styling start*/
+
+.add_assignments_sec {
+  margin-left: auto;
+  margin-right: auto;
+}
+.assignment_table_sec {
+  width: 60%;
+  border: 3px solid orangered;
+  margin-top: 2rem;
+  box-shadow: 0px 0px 15px 1px rgb(184 184 184);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width:657px) {
+  .assignment_table_sec{
+    width: 95%;
+  }
+  .assignment_table_sec table th{
+    padding: 8px;
+  }
+  .assignment_table_sec table th {
+    font-size: 18px !important;
+  }
+}
+@media screen and (max-width:428px) {
+  .assignment_table_sec{
+    width: 95%;
+  }
+  .assignment_table_sec table th{
+    padding: 8px;
+  }
+}
+
+.assignment_table_sec table {
+  
+  padding: 50px;
+}
+.assignment_table_sec table th {
+  padding:  7px 12px;
+  font-size: 26px;
+  text-align: center;
+  border: 2px solid orangered;
+}
+.assignment_table_sec table  td {
+  padding: 12px;
+
+  border: 2px solid orangered;
+}
+.assignment_table_sec table input {
+  width: 100%;
+  padding: 5px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+}
+.assignment_table_sec table input:focus {
+  outline: none;
+}
+.button_div {
+  border: 2px solid orangered;
+  border-top: none;
+  padding: 10px 30px;
+}
+.add_more_assign_button {
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  color: #78C1F9;
+  cursor: pointer;
+}
+.submit_button {
+  float: right;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 13rem;
+  margin-left: 13rem;
+}
+.submit_button a {
+  background-color: orangered;
+  padding: 10px 35px;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+/* add assignments page styling end*/
+
+/* Choose page styling start */
+
+.checbox__main label {
+  font-size: 22px;
+}
+.checbox__main input {
+  padding: 20px;
+}
+.first .checkBox {
+  border: 2px solid #f76907ff !important;
+  margin: 0 6px 0 0;
+  padding: 10px;
+}
+.first .checkBox:checked {
+  background-color: #f76907ff !important;
+}
+.first .checkBox:focus {
+  border: 2px solid #f76907ff;
+  box-shadow: none;
+}
+.Planner_left {
+  flex: 1;
+}
+.table td {
+  font-weight: 500;
+}
