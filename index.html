@@ -105,40 +105,40 @@
 
 
 
-    function validateForm() {
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+//     function validateForm() {
+//   const username = document.getElementById('username').value;
+//   const password = document.getElementById('password').value;
 
-  if (username === 'valid_username' && password === 'valid_password') {
-    return true; // allow form to be submitted
-  } else {
-    const invalidText = document.querySelector('.invalid-text');
-    invalidText.style.display = 'block'; // show the "invalid username or password" message
-    return false; // prevent form from being submitted
-  }
-}
+//   if (username === 'valid_username' && password === 'valid_password') {
+//     return true; // allow form to be submitted
+//   } else {
+//     const invalidText = document.querySelector('.invalid-text');
+//     invalidText.style.display = 'block'; // show the "invalid username or password" message
+//     return false; // prevent form from being submitted
+//   }
+// }
 
-document.querySelector('.Login__sec-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value;
-  var validUsernames = ['user1', 'user2', 'user3', 'user4', 'user5'];
-  var validPasswords = ['pass5', 'pass2', 'pass3', 'pass4', 'pass5'];
+// document.querySelector('.Login__sec-form').addEventListener('submit', function(event) {
+//   event.preventDefault();
+//  var username = document.getElementById('username').value;
+//  var password = document.getElementById('password').value;
+//  var validUsernames = ['user1', 'user2', 'user3', 'user4', 'user5'];
+//  var validPasswords = ['pass5', 'pass2', 'pass3', 'pass4', 'pass5'];
 
-  var isValid = false;
-  for (var i = 0; i < validUsernames.length; i++) {
-    if (username === validUsernames[i] && password === validPasswords[i]) {
-      isValid = true;
-      break;
-    }
-  }
+//   var isValid = false;
+//   for (var i = 0; i < validUsernames.length; i++) {
+//     if (username === validUsernames[i] && password === validPasswords[i]) {
+//       isValid = true;
+//       break;
+//     }
+//   }
 
-  if (isValid) {
-    window.location.href = './home.html';
-  } else {
-    document.querySelector('.invalid-text').style.display = 'block';
-  }
-});
+//   if (isValid) {
+//     window.location.href = './home.html';
+//   } else {
+//     document.querySelector('.invalid-text').style.display = 'block';
+//   }
+// });
     
   </script>
 </html>
